@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nb.theme.background">
+
+    <include layout="@layout/toolbar"/>
+
+    <com.brioal.bottomtab.view.BottomLayout
+        android:id="@+id/main_bottomTab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true" />
+
+    <com.android.windnovel.widget.NoScrollViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line_view"
+        android:layout_marginTop="45dp"
+        android:background="@color/nb.theme.background"
+        android:descendantFocusability="blocksDescendants" />
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/main_bottomTab"
+        android:background="@color/nb.divider.narrow" />
+
+</RelativeLayout>
